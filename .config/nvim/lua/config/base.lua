@@ -8,9 +8,29 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2 
 vim.keymap.set('n', 'dd', '"_dd')
 
-vim.keymap.set('n', '<C-n>', ':Tex')
-vim.keymap.set('n', '<C-e>', ':Vex')
-vim.keymap.set('n', '<C-n>', ':tabnew<cr>')
-vim.keymap.set('n', '<C-w>', ':tabclose')
+vim.keymap.set('n', '<C-e>', ':Ex')
+-- vim.keymap.set('n', '<C-n>', ':tabnew<cr>')
+--vim.keymap.set('n', '<C-w>', ':tabclose')
 
+vim.api.nvim_create_user_command("Ex", "NvimTreeToggle", {})
 
+local function paste() 
+  return {
+    vim.fn.split(vim.fn.getreg(""), "\n"),
+    vim.fn.getregtype(""),
+  }
+end
+
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = paste,
+    ['*'] = paste,
+  }
+}
+
+vim.o.clipboard = "unnamedplus"

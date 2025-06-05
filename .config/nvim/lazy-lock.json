@@ -7,5 +7,9 @@
   "nightfox.nvim": { "branch": "main", "commit": "df75a6a94910ae47854341d6b5a6fd483192c0eb" },
   "nvim-cmp": { "branch": "main", "commit": "d818fd0624205b34e14888358037fb6f5dc51234" },
   "nvim-lspconfig": { "branch": "master", "commit": "df9c116cbcf0aa7e58f2b36b0296fa687e87f36f" },
-  "nvim-treesitter": { "branch": "master", "commit": "874b99065b4b00b84b0ca5fa63490c93728a45ab" }
+  "nvim-tree.lua": { "branch": "master", "commit": "be5b788f2dc1522c73fb7afad9092331c8aebe80" },
+  "nvim-treesitter": { "branch": "master", "commit": "874b99065b4b00b84b0ca5fa63490c93728a45ab" },
+  "nvim-web-devicons": { "branch": "master", "commit": "50b5b06bff13a9b4eab946de7c7033649a6618a1" },
+  "plenary.nvim": { "branch": "master", "commit": "ec289423a1693aeae6cd0d503bac2856af74edaa" },
+  "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" }
 }
